@@ -17,7 +17,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         // ListViewのインスタンスを生成
         //val listView1 = findViewById<ListView>(R.id.list_view)
         //val listView2 = findViewById<ListView>(R.id.list_view)
