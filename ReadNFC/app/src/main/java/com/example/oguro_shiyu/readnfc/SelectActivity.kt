@@ -4,8 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.AlarmClock
-import android.provider.AlarmClock.EXTRA_MESSAGE
+import android.os.Parcelable
 import android.widget.Button
 
 class SelectActivity : AppCompatActivity() {
@@ -18,11 +17,12 @@ class SelectActivity : AppCompatActivity() {
         val buttonRead2 = findViewById(R.id.button1) as Button
         val buttonRead3 = findViewById(R.id.button1) as Button
 
-        val getTag = intent.getStringExtra("GET_TAG")
+        //val getTag = intent.getStringExtra("GET_TAG")
 
         // start
         buttonRead1.setOnClickListener {
             val arg = intent.getStringExtra("ARG") // 呼び出し元から引数を受け取る
+            //val arg = intent.getParcelableArrayExtra("ARG")
             sendResult(arg)
         }
     }

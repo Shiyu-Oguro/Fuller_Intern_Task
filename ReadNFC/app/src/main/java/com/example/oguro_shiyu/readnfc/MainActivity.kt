@@ -44,6 +44,7 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         const val GET_TAG = "com.shiyu.GET_TAG"
+        val getTag = null
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -113,9 +114,10 @@ class MainActivity : AppCompatActivity() {
 
         val ndef = NfcF.get(getTag)
         if(ndef != null) {
+
             ndef.connect()
             if (ndef.isConnected) {
-                textStart.text = getTag.toString()
+                //textStart.text = getTag.toString()
             }
         }else{
             textStart.text= "No Connect ..... "
@@ -138,8 +140,8 @@ class MainActivity : AppCompatActivity() {
         }*/
         val intent = Intent(this, SelectActivity::class.java)
         //intent.putExtra(EXTRA_MESSAGE, message)
-        intent.putExtra("ARG","aaa"); // 引数渡しする場合はIntentクラスのputExtraメソッド経由で渡す
-        //intent.putExtra(GET_TAG,getTag)
+        intent.putExtra("ARG","お疲れさまでした。"); // 引数渡しする場合はIntentクラスのputExtraメソッド経由で渡す
+        //intent.putExtra("ARG",getTag)
         startActivityForResult(intent,REQUEST_CODE)
     }
 
@@ -156,10 +158,10 @@ class MainActivity : AppCompatActivity() {
             REQUEST_CODE ->
                 // 呼び出し先のActivityから結果を受け取る
                 if (resultCode == Activity.RESULT_OK) {
-                    val result = data.getStringExtra("RESULT")
+                    val result = data.getStringExtra("RESULT") ?: return
                     //Log.d("ログ", result)
-                    //textFinish.text = result.toString()
-                    textFinish.text = "終わりです！"
+                    textFinish.text = result.toString()
+                    //textFinish.text = "終わりです！"
                     //val ndef = NfcF.get(getTag2)
                     /*if(ndef != null) {
                         ndef.connect()
@@ -177,7 +179,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     //どうすればActiveに検出できるか
-    //どうすれば一定時間間隔で実行できるか
 
     @SuppressLint("MissingPermission")
     override fun onPause() {
