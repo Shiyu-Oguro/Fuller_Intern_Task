@@ -13,7 +13,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 import android.widget.BaseAdapter
 
 
-
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
