@@ -12,10 +12,7 @@ import com.example.oguro_shiyu.fuller_is_task.R.style.CardView
 import kotlinx.android.synthetic.main.activity_main.*
 import android.widget.BaseAdapter
 
-//private val scenes = arrayOf("Ventnor", "Wroxall")
 
-// ちょっと冗長的ですが分かり易くするために
-//private val photos = intArrayOf(R.drawable.ic_launcher_background, R.drawable.ic_launcher_background)
 
 class MainActivity : AppCompatActivity() {
 
