@@ -15,8 +15,8 @@ import android.widget.BaseAdapter
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main2)
         // ListViewのインスタンスを生成
         //val listView1 = findViewById<ListView>(R.id.list_view)
         //val listView2 = findViewById<ListView>(R.id.list_view)

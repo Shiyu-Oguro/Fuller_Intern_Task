@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.oguro_shiyu.fuller_is_task.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="4dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/myIcon"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginStart="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/ic_launcher_round" />
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="24dp"
+                android:ellipsize="end"
+                android:letterSpacing="0.1"
+                android:maxWidth="246dp"
+                android:text="ホーム"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/myIcon"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <ImageView
+            android:id="@+id/tweetIcon"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/accountName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:text="AccountName"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            app:layout_constraintStart_toEndOf="@id/tweetIcon"
+            app:layout_constraintTop_toTopOf="@id/tweetIcon" />
+
+        <TextView
+            android:id="@+id/accountId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="accountId"
+            android:textColor="#747474"
+            android:textSize="16dp"
+            app:layout_constraintStart_toEndOf="@id/accountName"
+            app:layout_constraintTop_toTopOf="@id/tweetIcon" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="time"
+            android:textColor="#747474"
+            android:textSize="16dp"
+            app:layout_constraintStart_toEndOf="@id/accountId"
+            app:layout_constraintTop_toTopOf="@id/tweetIcon" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/group744"
+            app:layout_constraintBottom_toBottomOf="@id/accountName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/accountName" />
+
+        <TextView
+            android:id="@+id/tweetContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="22dp"
+            android:text="TweetContentTweetContentTweetContentTweetContentTweetContentTweetContentTweetContentTweetContentTweetContentTweetContent"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/accountName"
+            app:layout_constraintTop_toBottomOf="@id/accountName" />
+
+        <ImageView
+            android:id="@+id/tweetImage"
+            android:layout_width="0dp"
+            android:layout_height="142dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="22dp"
+            android:src="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tweetContent"
+            app:layout_constraintTop_toBottomOf="@id/tweetContent" />
+
+        <ImageView
+            android:id="@+id/comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/group743"
+            app:layout_constraintStart_toStartOf="@id/tweetImage"
+            app:layout_constraintTop_toBottomOf="@id/tweetImage" />
+
+
+        <ImageView
+            android:id="@+id/rt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:src="@drawable/group740"
+            app:layout_constraintStart_toEndOf="@id/comment"
+            app:layout_constraintTop_toTopOf="@id/comment" />
+
+        <ImageView
+            android:id="@+id/fav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:src="@drawable/group741"
+            app:layout_constraintStart_toEndOf="@id/rt"
+            app:layout_constraintTop_toTopOf="@id/rt" />
+
+
+        <ImageView
+            android:id="@+id/share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:src="@drawable/group742"
+            app:layout_constraintStart_toEndOf="@id/fav"
+            app:layout_constraintTop_toTopOf="@id/fav" />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
